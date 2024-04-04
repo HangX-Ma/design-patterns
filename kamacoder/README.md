@@ -1,5 +1,21 @@
 # About Design Patterns Problems - C++
 
+## 8. Coffee with sugar
+
+What is **Decorator**? Understanding this concept seems to be more important. This design pattern acts like a stack that adds the needed **Concrete Decorators** on original one.
+
+In this scenarios, we want to brew a cup of coffee with some supplements. We are asked only one small packet _sugar_ or a cup of _milk_. Actually we can add more _sugar_ and _milk_.
+
+```cpp
+// Get a cup of black coffee with milk and sugar
+std::shared_ptr<Coffee> coffee;
+std::shared_ptr<Coffee> mixer1;
+std::shared_ptr<Coffee> mixer2;
+coffee = std::make_shared<BlackCoffe>();
+mixer1 = std::make_shared<MilkMixer>(coffee);
+mixer2 = std::make_shared<SugarMixer>(mixer1);
+```
+
 ## 11. Company's organization structure
 
 We are asked to use **Composite** design pattern to solve the problem.

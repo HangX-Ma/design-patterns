@@ -46,7 +46,8 @@ class Department : public Property, public std::enable_shared_from_this<Departme
     Department() = default;
     explicit Department(std::string_view name) : Property("D", name, true) {}
 
-    void add(std::shared_ptr<Property> employee) override {
+    void add(std::shared_ptr<Property> employee) override
+    {
         employees.push_back(employee);
         employee->setParent(shared_from_this());
     }
@@ -86,7 +87,8 @@ class Company : public Property, public std::enable_shared_from_this<Company>
  public:
     explicit Company(std::string_view name) : Property("C", name, true) {}
 
-    void add(std::shared_ptr<Property> department) override {
+    void add(std::shared_ptr<Property> department) override
+    {
         departments.push_back(department);
         department->setParent(shared_from_this());
     }
