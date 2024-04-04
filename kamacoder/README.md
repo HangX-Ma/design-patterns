@@ -1,5 +1,13 @@
 # About Design Patterns Problems - C++
 
+## 6. Dock
+
+Use **multiple inheritance** or **combination** can both easily convert items from weird interface to target interface.
+
+## 7. Buy a house
+
+Initially I think **Facade** has no difference with **Proxy**. But **Proxy** design pattern makes all proxies or real objects share the same interface, which differs from **Facade** design pattern.
+
 ## 8. Coffee with sugar
 
 What is **Decorator**? Understanding this concept seems to be more important. This design pattern acts like a stack that adds the needed **Concrete Decorators** on original one.
@@ -15,6 +23,14 @@ coffee = std::make_shared<BlackCoffe>();
 mixer1 = std::make_shared<MilkMixer>(coffee);
 mixer2 = std::make_shared<SugarMixer>(mixer1);
 ```
+
+## 9. Power switch
+
+Just like `switch` and `if-else`.
+
+## 10. Universal remote control
+
+**Abstraction** and **Implementation**.
 
 ## 11. Company's organization structure
 
@@ -90,3 +106,17 @@ class Property {
     std::string name;
 }
 ```
+
+## 12. Graphics editor
+
+How to identify the reusable the shared resources is the core. In this problem, the shared resources are **Shape Type**. The unique resources are **Position** at where to draw shapes.
+
+I also met a problem about **local static variable**. I want to use a `static string` variable in a function. However, it seems only acquire the first definition value, which not updated since ever.
+
+```cpp
+static std::string outstr = first_drawn_ ? " drawn at " : " shared at ";
+```
+
+I find an explanation: _Static variables are initialized only once, and then uninitialized._ The expression above not an assignment but a definition. So the value stored in `outstr` only acquired during initialization. So what we need to do is just make the expression a pure definition and then change its value.
+
+> [关于静态变量“赋值无效问题”的探讨结果](https://blog.csdn.net/cinmyheart/article/details/9737533)

@@ -1,2 +1,7 @@
-add_executable(11-composite 11-composite.cpp)
+add_executable(6-adapter 6-adapter.cpp)
+add_executable(7-proxy 7-proxy.cpp)
 add_executable(8-decorator 8-decorator.cpp)
+add_executable(9-facade 9-facade.cpp)
+add_executable(10-bridge 10-bridge.cpp)
+add_executable(11-composite 11-composite.cpp)
+add_executable(12-flyweight 12-flyweight.cpp)
