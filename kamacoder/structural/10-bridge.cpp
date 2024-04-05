@@ -51,8 +51,7 @@ class Remote
     {
         if (brand == 0) {
             dev = std::make_unique<Sony>();
-        }
-        else if (brand == 1) {
+        } else if (brand == 1) {
             dev = std::make_unique<TCL>();
         }
 

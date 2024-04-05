@@ -1,3 +1,10 @@
+# creational
+add_executable(1-singleton creational/1-singleton.cpp)
+add_executable(2-factory creational/2-factory.cpp)
+add_executable(3-abstract_factory creational/3-abstract_factory.cpp)
+add_executable(4-builder creational/4-builder.cpp)
+add_executable(5-prototype creational/5-prototype.cpp)
+# structural
 add_executable(6-adapter structural/6-adapter.cpp)
 add_executable(7-proxy structural/7-proxy.cpp)
 add_executable(8-decorator structural/8-decorator.cpp)

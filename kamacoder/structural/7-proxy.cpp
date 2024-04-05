@@ -55,9 +55,7 @@ class Proxy : public House
 
 // proxy design pattern makes all proxies or real objects share
 // the same interface, which differs from facade design pattern.
-void client(const std::unique_ptr<House>& house) {
-    house->request();
-}
+void client(const std::unique_ptr<House> &house) { house->request(); }
 
 int main()
 {

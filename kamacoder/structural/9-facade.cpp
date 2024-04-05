@@ -51,8 +51,9 @@ class MasterSwitch
         tv = std::make_unique<Television>();
     }
 
-    void operation(int i) {
-        switch(i) {
+    void operation(int i)
+    {
+        switch (i) {
         case 1:
             ac->powerOff();
             break;
@@ -76,7 +77,8 @@ class MasterSwitch
     std::unique_ptr<Television> tv;
 };
 
-int main() {
+int main()
+{
     MasterSwitch ms;
     int n;
     std::cin >> n;

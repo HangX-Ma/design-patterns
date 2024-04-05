@@ -30,7 +30,8 @@ class ExDock : public TypeC, public USB
 {
  public:
     explicit ExDock(int type) : type(type) {}
-    void charge() const override {
+    void charge() const override
+    {
         switch (type) {
         case 1:
             TypeC::charge();
