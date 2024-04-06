@@ -25,7 +25,7 @@ class Device
         power_state = false;
     }
 
-    virtual const std::string &getBrand() const { return brand; };
+    virtual const std::string &getBrand() const { return brand; }
 
  protected:
     bool power_state{false};

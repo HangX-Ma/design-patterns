@@ -1,6 +1,7 @@
 #include <algorithm>
 #include <iostream>
 #include <memory>
+#include <utility>
 #include <vector>
 #include <string_view>
 
@@ -20,7 +21,7 @@ class Property
     virtual std::string_view getType() const { return type; }
     virtual void setType(std::string_view type) { this->type = std::string{type}; }
 
-    virtual void setParent(std::shared_ptr<Property> property) { parent = property; }
+    virtual void setParent(std::shared_ptr<Property> property) { parent = std::move(property); }
     virtual std::shared_ptr<Property> getParent() { return parent; }
 
     virtual bool isComposite() const { return has_children; }
